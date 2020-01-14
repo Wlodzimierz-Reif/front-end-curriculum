@@ -1,0 +1,12 @@
+{
+  "name": "html-css-code-along",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/nology-tech/html-css-code-along.git",
+  "author": "Liam Farrell",
+  "license": "MIT",
+  "devDependencies": {
+    "htmlhint": "^0.10.1",
+    "sass": "^1.17.0"
+  }
+}

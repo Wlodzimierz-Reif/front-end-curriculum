@@ -1,0 +1,25 @@
+{
+  "main": "index.html",
+  "scripts": {
+    "build": "babel src -d output",
+    "sass-watch": "sass --watch ./src:./src ",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.3.30",
+    "jquery": "^3.4.1",
+    "sass": "^1.21.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@types/jest": "^24.0.15",
+    "jest": "^24.8.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "./src/testSetup.js"
+    ]
+  }
+}
