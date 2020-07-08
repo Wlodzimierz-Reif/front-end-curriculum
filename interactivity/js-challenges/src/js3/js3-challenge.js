@@ -4,8 +4,8 @@
  * @param {number} age - someones age
  * @return {number} half the input age + 7
  */
-export const minDateableAge = age => {
-  // your code here
+export const minDateableAge = (age) => {
+  return age / 2 + 7;
 };
 
 /**
@@ -14,8 +14,8 @@ export const minDateableAge = age => {
  * @param {number} tempInCelsius - temperature in celsius
  * @return {boolean} if the temperture is feverous
  */
-export const hasFever = tempInCelsius => {
-  // your code here
+export const hasFever = (tempInCelsius) => {
+  return tempInCelsius > 37.4 ? true : false;
 };
 
 /**
@@ -24,7 +24,7 @@ export const hasFever = tempInCelsius => {
  * @param {number} width - TV width
  * @return {number} TV height
  */
-export const calcTVHeight = width => {
+export const calcTVHeight = (width) => {
   // your code here
 };
 
@@ -47,5 +47,9 @@ export const couldDate = (age1, age2) => {
  * @return {array} The new array of darkened colours
  */
 export const colorDarken = (rgbArray, darkenAmount) => {
-  // your code here
+  const newArray = [...rgbArray];
+  return newArray.map((color) =>
+    color - darkenAmount < 0 ? 0 : color - darkenAmount
+  );
+  // });
 };

@@ -1,0 +1,31 @@
+#first {
+  width: 800px;
+  height: 400px;
+}
+
+#second {
+  width: 600px;
+  height: 300px;
+  margin: 50px 100px;
+  background-color: green;
+}
+
+#third {
+  width: 400px;
+  height: 200px;
+  margin: 50px 100px;
+  background-color: white;
+}
+
+#fourth {
+  width: 200px;
+  height: 100px;
+  margin: 50px 100px;
+  border: 2px dotted black;
+}
+
+#first,
+#second,
+#third {
+  border: 2px solid black;
+}

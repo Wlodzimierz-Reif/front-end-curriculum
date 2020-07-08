@@ -8,4 +8,16 @@
  */
 export const fixColors = (colorArray, index) => {
   // your code here
+  const array = [...colorArray];
+  const newArray = array.map((color) => {
+    if (color !== "green" && color !== "yellow" && color !== "blue") {
+      console.log(color);
+
+      return "red";
+    }
+    return color;
+  });
+  // console.log(newArray);
+
+  return newArray;
 };
