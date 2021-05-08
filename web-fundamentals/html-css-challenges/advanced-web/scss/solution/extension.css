@@ -8,35 +8,57 @@ header {
   width: 100vw;
   max-height: 10vh;
 }
+
 header h1 {
   height: 100%;
   max-width: 100%;
   padding: 10px;
   background-color: #06a7ed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main {
   height: 90vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-image: url("../assets/background-2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 main .translucent {
   opacity: 0.5;
 }
+
 main .translucent:hover {
   opacity: 1;
 }
+
 main .side-panel,
 main #mdl-panel {
   border: 2px black solid;
@@ -46,16 +68,28 @@ main #mdl-panel {
   margin: 0 20px;
   background-color: #06a7ed;
 }
+
 main .side-panel .hidden,
 main #mdl-panel .hidden {
   display: none;
 }
+
 main .side-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 main .side-panel div {
   height: 25%;
   width: 80%;
@@ -64,12 +98,23 @@ main .side-panel div {
   background-color: #f652a0;
   margin: auto;
 }
+
 main #mdl-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 main #mdl-panel div {
   height: 40%;
   width: 80%;
@@ -78,9 +123,9 @@ main #mdl-panel div {
   background-color: #f8ea8c;
   border-radius: 25px;
 }
+
 main .side-panel:hover .hidden,
 main #mdl-panel:hover .hidden {
   display: block;
 }
-
-/*# sourceMappingURL=scss-extension.css.map */
+/*# sourceMappingURL=extension.css.map */

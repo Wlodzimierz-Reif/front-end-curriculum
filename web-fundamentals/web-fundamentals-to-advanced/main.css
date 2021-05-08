@@ -9,8 +9,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
 body * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Raleway, sans-serif;
   margin: 0;
   padding: 0;
@@ -25,6 +27,7 @@ header {
 
 /* Setting the background of main to the image means the image stays in one place and we can just show sections of it */
 main {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(images/background.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -180,9 +183,13 @@ footer .social i:hover {
 }
 
 #our-people {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .person-container {
@@ -195,8 +202,10 @@ footer .social i:hover {
   display: block;
   width: 100%;
   height: auto;
+  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .person-image:hover {
@@ -204,20 +213,30 @@ footer .social i:hover {
 }
 
 .person-name {
+  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #5d47d7;
   color: white;
   font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -271,20 +290,30 @@ footer .social i:hover {
   border-radius: 4px;
   padding: 16px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 form {
   text-align: center;
 }
+
 form > div {
   text-align: center;
   padding: 8px;
   border: none;
 }
-form > div > input, form > div > textarea {
+
+form > div > input,
+form > div > textarea {
   min-width: 250px;
   width: 25%;
   display: inline-block;
@@ -292,26 +321,53 @@ form > div > input, form > div > textarea {
   padding: 4px;
   outline: none;
 }
-form > div > input, form > div > textarea {
+
+form > div > input,
+form > div > textarea {
   font-size: 1em;
   color: #8c979e;
   border: none;
   border-bottom: 1px solid #8c979e;
 }
-form > div > input::placeholder, form > div > textarea::placeholder {
+
+form > div > input::-webkit-input-placeholder,
+form > div > textarea::-webkit-input-placeholder {
   color: #8c979e;
   font-family: Raleway, sans-serif;
 }
-form > div > input:hover, form > div > input:focus, form > div > textarea:hover, form > div > textarea:focus {
+
+form > div > input:-ms-input-placeholder,
+form > div > textarea:-ms-input-placeholder {
+  color: #8c979e;
+  font-family: Raleway, sans-serif;
+}
+
+form > div > input::-ms-input-placeholder,
+form > div > textarea::-ms-input-placeholder {
+  color: #8c979e;
+  font-family: Raleway, sans-serif;
+}
+
+form > div > input::placeholder,
+form > div > textarea::placeholder {
+  color: #8c979e;
+  font-family: Raleway, sans-serif;
+}
+
+form > div > input:hover, form > div > input:focus,
+form > div > textarea:hover,
+form > div > textarea:focus {
   color: #745cf9;
   border-color: #745cf9;
   cursor: pointer;
 }
+
 form .bottom-row textarea {
   height: 150px;
   vertical-align: top;
   display: inline-block;
 }
+
 form .bottom-row fieldset {
   vertical-align: top;
   display: inline-block;
@@ -321,34 +377,41 @@ form .bottom-row fieldset {
   padding: 4px;
   border: none;
 }
+
 form .bottom-row fieldset legend {
   margin-bottom: 8px;
   text-align: center;
   color: #8c979e;
 }
+
 form .bottom-row fieldset div {
   display: block;
   width: 50%;
   margin: 0 auto;
   text-align: left;
 }
+
 form .bottom-row fieldset div label {
   color: #8c979e;
 }
+
 form .bottom-row fieldset div label:hover, form .bottom-row fieldset div label:focus {
   color: #745cf9;
   border-color: #745cf9;
   cursor: pointer;
 }
+
 form .bottom-row fieldset div input {
   min-width: 20px;
   width: 40px;
   border-bottom: none;
   margin: 8px;
 }
+
 form #error-msg {
   color: red;
 }
+
 form #submit-btn {
   margin: 16px;
   background-color: #745cf9;
@@ -358,8 +421,9 @@ form #submit-btn {
   color: white;
   width: 100px;
   /* the & symbol can be used with 
-     SCSS to apply additional stylings to any pseudo-classes */
+       SCSS to apply additional stylings to any pseudo-classes */
 }
+
 form #submit-btn:hover {
   cursor: pointer;
   background-color: white;
@@ -370,30 +434,38 @@ form #submit-btn:hover {
 #projects {
   max-width: 1fr;
   padding: 8px 0;
+  display: -ms-grid;
   display: grid;
   grid-gap: 1vw;
   /* using grid-area names assigned to each article we can template what the rendered will look like */
-  grid-template-areas: "consultancy" "video" "workshops" "developers" "robots" "tedx";
+      grid-template-areas: "consultancy" "video" "workshops" "developers" "robots" "tedx";
 }
+
 #projects article {
   height: 200px;
 }
+
 #projects article .info {
   height: 100%;
   background-color: white;
   opacity: 0;
   color: #745cf9;
 }
+
 #projects article .info h2 {
   margin-bottom: 16px;
 }
+
 #projects article .info:hover {
   opacity: 0.9;
   cursor: pointer;
   padding: 16px;
 }
+
 #projects #consultancy {
   /* Assigning article a name to be used in grid-template */
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: consultancy;
   background-image: url("./images/consultancy.jpg");
   /* Applying mixin created at the start of the document */
@@ -401,35 +473,50 @@ form #submit-btn:hover {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 #projects #video {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: video;
   background-image: url("./images/video.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
+
 #projects #workshops {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: workshops;
   background-image: url("./images/workshop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 #projects #tedx {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
   grid-area: tedx;
   background-image: url("./images/talks.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 #projects #robots {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
   grid-area: robots;
   background-image: url("./images/robot.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 #projects #developers {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: developers;
   background-image: url("./images/developers.jpg");
   background-size: cover;
@@ -445,16 +532,15 @@ form #submit-btn:hover {
   header #mobile-h1 {
     display: none;
   }
-
   #projects {
     /* fr stands for fractions therefore our 3 columns are 30%, 30% & 40%  */
-    grid-template-columns: 3fr 3fr 4fr;
+    -ms-grid-columns: 3fr 3fr 4fr;
+        grid-template-columns: 3fr 3fr 4fr;
     /* By putting one article's name in two columns it will span across both */
-    grid-template-areas: "consultancy consultancy video" "workshops workshops workshops" "developers robots tedx";
+        grid-template-areas: "consultancy consultancy video" "workshops workshops workshops" "developers robots tedx";
   }
   #projects article {
     height: 350px;
   }
 }
-
 /*# sourceMappingURL=main.css.map */
